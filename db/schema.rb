@@ -35,13 +35,13 @@ ActiveRecord::Schema.define(:version => 20120808123820) do
   add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
 
   create_table "places", :force => true do |t|
-    t.string   "place_name"
+    t.string   "place"
     t.string   "location"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "places", ["place_name", "created_at"], :name => "index_places_on_place_name_and_created_at"
+  add_index "places", ["place", "created_at"], :name => "index_places_on_place_and_created_at"
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"

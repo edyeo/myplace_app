@@ -1,95 +1,22 @@
 
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-		<meta charset="utf-8" />
-	
-
-
-		<title>Experience &amp; Explore Everything California - Golden State of Mind</title>
-
-
-
-	
-
-
-
-
-</head>
-
-<body >
-
-		<!-- Begin main -->
+	<!-- Begin main -->
 		<div id="main" class="clearfix">
 			<!-- Begin wrap_primary -->
 			<div id="wrap_primary">
 				<div id="primary_content" class="clearfix">
 	
-					<div class="row">
-						<h2>Most Recent</h2>
-						
-						<ul class="controls">
-							<li class="left"><a href="#">Left</a></li>
-							<li class="right"><a href="#">Right</a></li>
-						</ul>
-					
-						<ul class="slider">
-							<li class="item blog">
-								<%= link_to image_tag(Content.find_by_place_id(1).photo(:small), :height => '135', :width => '200') %>
-							</li>
-						</ul>
-					
-						
-						<ul class="slider">
-							<li class="item blog">
-								<a title="Santa Cruz Beach Boardwalk" 
-								   data-location="" 
-								   href="/blog/view/santa-cruz-beach-boardwalk">
-								   <span class="rollover">Santa Cruz Beach Boardwalk</span>
-								   <img src="/uploads/blog/images/santacruz_entertainment_boardwalk2.jpg" width="200" height="135"/>
-								</a>
-							</li>
+					<%= render 'shared/most_recent'%>
+					<%= render 'shared/hot_place'%>
+					<%= render 'shared/sympathy'%>
+					<%= render 'shared/daily_life'%>
 
-						</ul>
-						
-						<ul class="slider">
-							<li class="item blog">
-								<a title="Santa Cruz Beach Boardwalk" 
-								   data-location="" 
-								   href="/blog/view/santa-cruz-beach-boardwalk">
-								   <span class="rollover">Santa Cruz Beach Boardwalk</span>
-								   <img src="/uploads/blog/images/santacruz_entertainment_boardwalk2.jpg" width="200" height="135"/>
-								</a>
-							</li>
-
-						</ul>
-						
-						<ul class="slider">
-							<li class="item blog">
-								<a title="Santa Cruz Beach Boardwalk" 
-								   data-location="" 
-								   href="/blog/view/santa-cruz-beach-boardwalk">
-								   <span class="rollover">Santa Cruz Beach Boardwalk</span>
-								   <img src="/uploads/blog/images/santacruz_entertainment_boardwalk2.jpg" width="200" height="135"/>
-								</a>
-							</li>
-						    <li class="item more"><a href="/places">More</a></li>
-						</ul>												
-					
-					</div>
-										
+															
 				</div>
 			</div>
 			<!-- End wrap_primary -->
 
 		</div>
 		<!-- End main -->
-
-
 		
 	</div>
-	
-</body>
 
-</html>

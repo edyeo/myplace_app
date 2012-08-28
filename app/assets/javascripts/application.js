@@ -14,22 +14,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require_tree .
+
 //= require bootstrap
+//= require_tree .
 
 
 
-//fill the .modal-body on HomePage
-function call_flipboard() {
-	$container 	= $( '#flip' ), $pages = $container.children().hide();
-console.log($container);
-console.log("@container defined");
-console.log("@pages.hide executed");
-	if($container.flips){
-		console.log("method(flips) exists");
-	}else{
-		console.log("method(flips) doesn't exist");
-	}
-	$container.flips();
-console.log("container.flips executed");
-}

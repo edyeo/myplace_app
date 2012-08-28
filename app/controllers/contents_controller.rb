@@ -18,6 +18,10 @@ class ContentsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @content }
+      format.js {
+        @place = Place.find(params[:place_id])
+        @contents = @place.contents
+      }
     end
   end
 
@@ -29,6 +33,7 @@ class ContentsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @content }
+   
     end
   end
 
@@ -59,9 +64,11 @@ class ContentsController < ApplicationController
       if @content.update_attributes(params[:content])
         format.html { redirect_to @content, notice: 'Content was successfully updated.' }
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: "edit" }
         format.json { render json: @content.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -75,6 +82,18 @@ class ContentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to contents_url }
       format.json { head :no_content }
+      format.js
+    end
+  end
+
+  def modal
+
+  respond_to do |format|
+    format.js {
+      @users = User.all;
+      @place = Place.find(params[:place_id]);
+      @contents = @place.contents.limit(14);
+    }
     end
   end
 end

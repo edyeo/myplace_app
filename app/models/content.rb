@@ -3,8 +3,8 @@ class Content < ActiveRecord::Base
   
   #paperclip
   has_attached_file :photo,:styles => {:thumb=> "100x100#",:small  => "200x135>" },
-   :path => ":rails_root/assets/images/attachments/place_id/:place_id/resources/:basename_:style.:extension",
-   :url => "/attachments/place_id/:place_id/resources/:basename_:style.:extension"
+   :path => ":rails_root/public/attachments/images/place_id/:place_id/resources/:basename_:style.:extension",
+   :url => "/attachments/images/place_id/:place_id/resources/:basename_:style.:extension"
   
   belongs_to :user
   belongs_to :place

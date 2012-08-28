@@ -1,25 +1,11 @@
 <h1>Listing places</h1>
+<div class="flipboard">
+<%= render 'shared/flipboard'%>
+</div>
+<br>
+<br>
+<br>
 
-<table>
-  <tr>
-    <th>PlaceName</th>
-    <th>Location</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @places.each do |place| %>
-  <tr>
-    <td><%= place.place_name %></td>
-    <td><%= place.location %></td>
-    <td><%= link_to 'Show', place %></td>
-    <td><%= link_to 'Edit', edit_place_path(place) %></td>
-    <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Place', new_place_path %>

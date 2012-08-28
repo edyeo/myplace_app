@@ -3,20 +3,30 @@
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag    "home_static" %>	
+   	<%= stylesheet_link_tag    "master" %>
+   	<%= stylesheet_link_tag    "reset" %>
+   	<%= stylesheet_link_tag	  "custom" %>
+	<%= stylesheet_link_tag	  "demo" %>
+	<%= stylesheet_link_tag	  "style_flipboard"%>
+
+	<%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
 
 	<%= javascript_include_tag "jquery.min" %>
 	<%= javascript_include_tag "jquery-ui.min" %>
     <%= javascript_include_tag "plugins.min" %>
-
+    <%= javascript_include_tag "modernizr.custom.08464" %>
 	<%= javascript_include_tag "home_static" %>
 	<%= javascript_include_tag "common" %>
 
-   <%= stylesheet_link_tag    "home_static" %>	
-   <%= stylesheet_link_tag    "master" %>
-   <%= stylesheet_link_tag    "reset" %>
-   <%= stylesheet_link_tag    "styles" %>	
+	<%= javascript_include_tag "jquery.tmpl.min" %>
+	<%= javascript_include_tag "jquery.history" %>
+	<%= javascript_include_tag "core.string" %>
+	<%= javascript_include_tag "jquery.touchSwipe-1.2.5" %>
+	<%= javascript_include_tag "jquery.flips" %>
+
+
 
   </head>
   <body>
@@ -26,9 +36,11 @@
      <!--   <div class="alert alert-<%= key %>"><%= value %></div> -->
       <%= content_tag(:div, value, class: "alert alert-#{key}") %>
       <% end %>
+
       <%= yield %>
-      <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
+
+ <!--     <%= render 'layouts/footer' %> -->
+ <!--     <%= debug(params) if Rails.env.development? %> -->
      </div>
   </body>
 </html>
