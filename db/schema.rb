@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120725113407) do
+ActiveRecord::Schema.define(:version => 20120808123820) do
+
+  create_table "contents", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "place_id"
+    t.text     "story"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -21,6 +33,15 @@ ActiveRecord::Schema.define(:version => 20120725113407) do
   end
 
   add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
+
+  create_table "places", :force => true do |t|
+    t.string   "place_name"
+    t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "places", ["place_name", "created_at"], :name => "index_places_on_place_name_and_created_at"
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"

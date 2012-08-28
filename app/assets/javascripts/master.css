@@ -1,0 +1,765 @@
+/* ------------------------------------------------------
+	PacSun - Golden State of Mind
+	
+	Last updated: 2012.04.19
+-------------------------------------------------------*/
+
+ @import url("reset.css"); 
+ @import url("custom.css"); 
+
+
+
+/* --- Fonts
+-------------------------------------------------------*/
+
+@font-face {
+    font-family: 'ProximaNovaCondensedRegular';
+    src: url('http://www.gsom.com/font/proxima-nova-condensed-regular-webfont.eot');
+    src: url('http://www.gsom.com/font/proxima-nova-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-regular-webfont.woff') format('woff'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-regular-webfont.ttf') format('truetype'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-regular-webfont.svg#ProximaNovaCondensedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('http://www.gsom.com/font/proxima-nova-regular-webfont.eot');
+    src: url('http://www.gsom.com/font/proxima-nova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.gsom.com/font/proxima-nova-regular-webfont.woff') format('woff'),
+         url('http://www.gsom.com/font/proxima-nova-regular-webfont.ttf') format('truetype'),
+         url('http://www.gsom.com/font/proxima-nova-regular-webfont.svg#ProximaNovaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+'http://www.gsom.com/
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('http://www.gsom.com/font/proxima-nova-bold-webfont.eot');
+    src: url('http://www.gsom.com/font/proxima-nova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.gsom.com/font/proxima-nova-bold-webfont.woff') format('woff'),
+         url('http://www.gsom.com/font/proxima-nova-bold-webfont.ttf') format('truetype'),
+         url('http://www.gsom.com/font/proxima-nova-bold-webfont.svg#ProximaNovaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url('http://www.gsom.com/font/proxima-nova-semibold-webfont.eot');
+    src: url('http://www.gsom.com/font/proxima-nova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.gsom.com/font/proxima-nova-semibold-webfont.woff') format('woff'),
+         url('http://www.gsom.com/font/proxima-nova-semibold-webfont.ttf') format('truetype'),
+         url('http://www.gsom.com/font/proxima-nova-semibold-webfont.svg#ProximaNovaSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCondensedBold';
+    src: url('http://www.gsom.com/font/proxima-nova-condensed-bold-webfont.eot');
+    src: url('http://www.gsom.com/font/proxima-nova-condensed-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-bold-webfont.woff') format('woff'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-bold-webfont.ttf') format('truetype'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-bold-webfont.svg#ProximaNovaCondensedBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCondensedSemibold';
+    src: url('http://www.gsom.com/font/proxima-nova-condensed-semibold-webfont.eot');
+    src: url('http://www.gsom.com/font/proxima-nova-condensed-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-semibold-webfont.woff') format('woff'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-semibold-webfont.ttf') format('truetype'),
+         url('http://www.gsom.com/font/proxima-nova-condensed-semibold-webfont.svg#ProximaNovaCondensedSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+/* --- | Categories | --- */
+
+#secondary_content ul.checkboxes {
+	font-family: 'ProximaNovaCondensedRegular';
+	text-transform: uppercase;
+	list-style: none;
+	margin: 5px 0 25px 1px;
+}
+
+	#secondary_content.sidebar ul.checkboxes li {
+		border-bottom: 1px solid #333;
+	}
+
+	#secondary_content.sidebar ul.checkboxes.no_icon li {
+		background: none;
+	}
+		
+		#secondary_content.sidebar ul.checkboxes li a {
+			line-height: 19px;
+			color: #fff;
+			display: block;
+			padding: 7px 0 7px 64px;
+			background: url(checkbox.png) no-repeat 0 7px;
+		}
+		
+		#secondary_content.sidebar ul.checkboxes.no_icon li a {
+			background: url(checkbox.png) no-repeat 0 7px;
+		}
+			#secondary_content.sidebar ul.checkboxes li a:hover { color: #848484; }
+			#secondary_content.sidebar ul.checkboxes.no_icon li a.checked { background-position: 0px -93px; }
+
+/* --- | Categories | --- */
+
+#secondary_content.sidebar ul.checkboxes { }
+
+	#secondary_content.sidebar ul.checkboxes li { background: url(category_icons.png) no-repeat 33px 0; }
+		#secondary_content.sidebar ul.checkboxes li.all { background: none; }
+		#secondary_content.sidebar ul.checkboxes li.fashion { background-position: 33px -32px; }
+		#secondary_content.sidebar ul.checkboxes li.brands { background-position: 33px -66px; }
+		#secondary_content.sidebar ul.checkboxes li.art { background-position: 33px -98px; }
+		#secondary_content.sidebar ul.checkboxes li.music { background-position: 33px -130px; }
+		#secondary_content.sidebar ul.checkboxes li.entertainment { background-position: 33px -164px; }
+		#secondary_content.sidebar ul.checkboxes li.parks { background-position: 33px -197px; }
+		#secondary_content.sidebar ul.checkboxes li.action_sports { background-position: 33px -229px; }
+
+		#secondary_content.sidebar ul.checkboxes li a {
+			background-position: 132px 7px;
+		}
+			#secondary_content.sidebar ul.checkboxes li a.checked { background-position: 132px -93px; }
+
+/* --- | Rollovers - Video, Pics, Social | --- */
+
+	/* --- | Fancybox for Instagram | --- */
+
+	body .fancybox-instagram .info {
+		font-size: 11px;
+		line-height: 16px;
+		text-transform: none;
+		color: #fff;
+		height: auto;
+	}
+	
+		.fancybox-instagram .info table {
+			width: 100%;
+		}
+		
+			.fancybox-instagram .info table td { vertical-align: middle; }
+	
+		.fancybox-instagram .info .instagram_info {
+			font-family: 'ProximaNovaRegular';
+			padding: 10px;
+		}
+	
+			.fancybox-instagram .info .instagram_info .username {
+				font-family: 'ProximaNovaCondensedRegular';
+				font-size: 11px;
+				line-height: 1em;
+				text-transform: uppercase;
+				margin-bottom: .5em;
+			}
+			
+				.fancybox-instagram .info .instagram_info .username strong {
+					font-size: 13px;
+				}
+	
+		body .fancybox-instagram .info .social {
+			padding: 12px 0;
+		}
+
+/* --- | Infinite More | --- */
+
+.infinite_more {
+	font-family: 'ProximaNovaCondensedRegular';
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 140px;
+	margin: 25px auto;
+}
+	
+	.infinite_more a {
+		color: #fff;
+		display: block;
+		padding: 4px;
+		background: #000;
+		border: 10px solid #333;
+	}
+		
+		.infinite_more a:hover { color: #848484; }
+
+
+
+
+
+
+
+
+/* --- Secondary Content / Sidebar
+-------------------------------------------------------*/
+
+#secondary_content.sidebar {
+	color: #fff;
+	float: right;
+	position: absolute;
+	right: 0;
+	width: 193px;
+	padding: 0 37px 0 0;
+	background: #000;
+}
+	
+	#secondary_content.sidebar h1 {
+		font-family: 'ProximaNovaRegular';
+		font-size: 20px;
+		line-height: 1em;
+		text-transform: uppercase;
+		color: #767676;
+		margin: 0 -5px 10px 33px;
+	}
+	
+	/* --- | Social - Used on Blog and Social | --- */
+	
+	#secondary_content.sidebar ul.social {
+		font-family: 'ProximaNovaCondensedSemibold';
+		font-size: 11px;
+		text-transform: uppercase;
+		list-style: none;
+		margin: 0 0 0 27px;
+	}
+		
+		#secondary_content.sidebar ul.social li {}
+			
+			#secondary_content.sidebar ul.social li a {
+				color: #838383;
+				padding-left: 35px;
+				background: url(social_icons.gif) no-repeat;
+			}
+				#secondary_content.sidebar ul.social li a:hover { color: #fff; }
+			
+			#secondary_content.sidebar ul.social li.fb a {}
+			#secondary_content.sidebar ul.social li.twitter a { background-position: 0 -24px; }
+			#secondary_content.sidebar ul.social li.pinterest a { background-position: 0 -47px; }
+			#secondary_content.sidebar ul.social li.tumblr a { background-position: 0 -71px; }
+			#secondary_content.sidebar ul.social li.youtube a { background-position: 0 -95px; }
+
+
+
+
+
+
+/* --- Fancybox
+-------------------------------------------------------*/
+
+/*! fancyBox v2.0.6 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-tmp iframe, .fancybox-tmp object {
+	vertical-align: top;
+	padding: 0;
+	margin: 0;
+}
+
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8020;
+}
+
+.fancybox-skin {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	color: #444;
+	text-shadow: none;
+}
+
+.fancybox-opened {
+	z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-outer, .fancybox-inner {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	outline: none;
+}
+
+.fancybox-inner {
+	overflow: hidden;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+	-webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+	color: #444;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 10px;
+}
+
+.fancybox-images, .fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+.fancybox-images {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-prev span, .fancybox-next span {
+	background-images: url('fancybox_sprite.png');
+}
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 8020;
+}
+
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+	background: url('fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-close {
+	text-indent: -9999px;
+	position: fixed;
+	top: 0;
+	right: 38px;
+	width: 51px;
+	height: 46px;
+	cursor: pointer;
+	z-index: 8040;
+}
+	
+	.fancybox-close a {
+		display: block;
+		height: 46px;
+		background: url(close.gif) no-repeat;
+	}
+		
+		.fancybox-close a:hover { background-position: 0 -46px; }
+
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+	background: transparent url('blank.gif'); /* helps IE */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 8040;
+}
+
+.fancybox-prev {
+	left: 0;
+}
+
+.fancybox-next {
+	right: 0;
+}
+
+.fancybox-nav span {
+	position: absolute;
+	top: 50%;
+	width: 55px;
+	height: 65px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 8040;
+	visibility: hidden;
+}
+
+.fancybox-prev span {
+	left: 0;
+	background: url(left.png);
+}
+
+.fancybox-next span {
+	right: 0;
+	background: url(right.png);
+}
+
+.fancybox-nav:hover span {
+	/*visibility: visible;*/
+}
+	
+	.fancybox-prev:hover span { background-position: 0 -65px; }
+	.fancybox-next:hover span { background-position: 0 -65px; }
+
+.fancybox-tmp {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	padding: 0;
+	overflow: visible;
+	visibility: hidden;
+}
+
+/* Overlay helper */
+
+#fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+	background: #000;
+}
+
+#fancybox-overlay.overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+/* Title helper */
+
+.fancybox-title {
+	visibility: hidden;
+	position: relative;
+	text-shadow: none;
+	z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+	position: absolute;
+	left: 0;
+	top: -40px;
+}
+
+.fancybox-title-float-wrap {
+	position: absolute;
+	right: 50%;
+	margin-bottom: -35px;
+	z-index: 8030;
+	text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+	font-family: 'ProximaNovaSemibold';
+	font-size: 22px;
+	line-height: 1em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #FFF;
+	display: inline-block;
+	padding: 0;
+}
+
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+	margin-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	padding: 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+}
+
+/* --- | Info Bar | --- */
+
+.fancybox-wrap .info {
+	font-family: 'ProximaNovaCondensedSemibold';
+	font-size: 11px;
+	line-height: 48px;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 8031;
+	height: 48px;
+	margin-top: 5px;
+	background: #212121;
+}
+	
+	/* --- | Links | --- */
+	
+	.fancybox-wrap .info a { color: #fff; }
+	.fancybox-wrap .info a:hover { color: #848484; }
+	
+	/* --- | See on Map & Rules CTA | --- */
+	
+	.fancybox-wrap .info .see_on_map a,
+	.fancybox-wrap .info .cta a {
+		float: left;
+		display: block;
+		height: 48px;
+		padding: 0 20px;
+		border-right: 1px solid #3c3c3c;
+	}
+	
+	/* --- | Social | --- */
+	
+	.fancybox-wrap .social {
+		float: right;
+		width: 206px;
+		padding-top: 12px;
+	}
+		
+		.fancybox-wrap .social .facebook {
+			line-height: 1em;
+			float: left;
+			margin-right: 9px;
+			padding-right: 9px;
+			border-right: 1px solid #636252;
+		}
+	
+		.fancybox-wrap .info .twitter {
+			text-indent: -9999px;
+			float: left;
+			width: 55px;
+			height: 20px;
+			padding-right: 9px;
+			margin-right: 9px;
+			background: url(twitter.png) no-repeat;
+			border-right: 1px solid #636252;
+		}
+		
+			.fancybox-wrap .info .twitter a {
+				display: block;
+				height: 20px;
+			}
+	
+		.fancybox-wrap .info .pinterest {
+			text-indent: -9999px;
+			float: left;
+			width: 43px;
+			height: 20px;
+			background: url(pinterest.png) no-repeat;
+		}
+		
+			.fancybox-wrap .info .pinterest a {
+				display: block;
+				height: 20px;
+			}
+
+
+
+/* --- Media Queries
+-------------------------------------------------------*/
+
+@media screen and (max-width: 950px) {
+	
+	#secondary_content {
+		position: static;
+		float: right;
+		margin-left: -230px;
+	}
+	
+	#map_sidebar_scroll .customScrollBox { overflow: auto; }
+	#map_sidebar_scroll .dragger_container { display: none; }
+	
+}
+
+/* iPad - should get retina as well */
+@media screen and (min-device-width: 768px) and (max-device-width:1024px) {
+	
+	header .header_content {
+		position: static;
+		min-width: 1024px;
+	}
+		
+		nav#primary_navigation {
+			width: 700px;
+		}
+	
+	#secondary_content {
+		position: static;
+		float: right;
+		margin-left: -230px;
+	}
+	
+	#map_sidebar_scroll .customScrollBox { overflow: auto; }
+	#map_sidebar_scroll .dragger_container { display: none; }
+	
+	footer {
+		min-width: 1024px;
+	}
+}
+
+/* iPhone */
+@media screen and (max-width: 700px),
+only screen and (max-device-width: 480px) {
+	
+	#main { padding: 0; }
+	
+
+	
+	/* --- | Primary | --- */
+	
+	#wrap_primary {
+		float: none;
+		width: auto;
+		padding: 16px;
+	}
+		body.blog-detail #wrap_primary { padding: 0; }
+		body #wrap_primary {
+			width: auto;
+			height: auto;
+		}
+		
+		#wrap_primary #primary_content {
+			width: auto;
+			margin: 0;
+		}
+		
+		/* --- | Blog | --- */
+		
+		body.blog #primary_content .item {
+			float: none;
+			margin: 0 auto 15px;
+		}
+		
+		body.blog-detail #primary_content .article_wrap {
+			width: auto;
+			margin: 0;
+			padding: 16px;
+		}
+		
+		body.blog-detail #primary_content .article_content .back {
+			margin-left: 0;
+		}
+		
+		body.blog-detail #primary_content .article_content {
+			width: auto;
+			margin: 0;
+		}
+			
+			body.blog-detail #primary_content .article_content article {
+			}
+			
+			article img {
+				max-width: 290px;
+			}
+			
+			#primary_content .article_footer {
+				display: none;
+			}
+		
+		#wrap_primary #primary_content .related_posts {
+			display: none;
+		}
+		
+		#wrap_primary #primary_content .related_posts_content {
+			display: none;
+			width: auto;
+		}
+		
+		/* --- | Campaign | --- */
+		
+		body .row {
+			margin: 0 -16px 17px -16px;
+			padding-top: 30px;
+		}
+			
+			body .row h2 {
+				left: 16px;
+				top: 0;
+			}
+		
+		body .row ul.controls {
+			display: none;
+		}
+		
+		body .row ul.slider {
+			padding-left: 16px;
+		}
+			
+			body .row ul.slider li {
+				margin-right: 10px;
+			}
+			
+				body .row ul.slider li.item.photo a:hover span.rollover { display: none }
+		
+		/* --- | Social | --- */
+		
+		body.social #primary_content .item {
+			float: none;
+			margin: 0 auto 15px;
+		}
+		
+		body.social .pagination {
+			display: none;
+		}
+		
+		/* --- | Sweeps | --- */
+		
+		body.sweeps #main {
+			padding-top: 386px;
+			background-position: -660px -37px;
+		}
+		
+		body.sweeps #wrap_primary #primary_content {
+			float: none;
+			width: auto;
+			margin: 0 -16px;
+			padding: 12px;
+		}
+		
+		/* --- | Downloads | --- */
+		
+		body.downloads #primary_content .row {
+			margin: 0 0 17px;
+			padding-top: 0;
+		}
+			
+			body.downloads #primary_content .row .item {
+				float: none;
+				margin: 0 0 16px;
+			}
+				
+				body.downloads #primary_content .row .item ul { display: none; }
+				
+				body.downloads #primary_content .item a:hover span.rollover { display: none; }
+	
+
+	/* --- | Secondary | --- */
+	
+	#secondary_content {
+		display: none;
+		float: none;
+		position: static;
+		width: auto;
+	}
+	
+
+}

@@ -1,0 +1,60 @@
+/* ------------------------------------------------------
+	Custom - PacSun - Golden State of Mind
+	
+	Homepage Experience: Fall 2012 1	
+-------------------------------------------------------*/
+
+
+
+/* --- Customized styles
+-------------------------------------------------------*/
+
+/* --- | Link color | --- */
+
+body.social a,
+#primary_content .photo .info strong,
+a.seasonal_color,
+.fancybox-instagram .info .instagram_info .username strong,
+.row ul.slider li.item.twitter a,
+#primary_content .links li a,
+.infinite_more a { color: #; }
+body.social a:hover { color: #848484; }
+
+
+
+/* --- | Tab | --- */
+
+header .drawer_arrow a { background-image: url(../images/arrow_pages.png); }
+
+/* --- | Home Page (Experience) | --- */
+
+section.one { background-image: url(../images/1_bg.jpg); }
+section.two { background-image: url(../images/2_bg.jpg); }
+section.three.bg { background-image: url(../images/3_bg_revise.jpg); }
+section.four.bg { background-image: url(../images/4_bg.jpg); }
+section.five.bg { background-image: url(../images/5_bg.jpg); }
+section.six.bg { background-image: url(../images/6_bg.jpg); }
+
+section.one .branding { background-image: url(../images/1_leftoverlay.png); }
+section.one .directions { background-image: url(../images/1_rightoverlay.png); }
+
+section.two .season_header { background-image: url(../images/2_videocopy.png); }
+section.two .video { background-image: url(../images/2_videostill.jpg); }
+
+section.three .extras { background-image: url(../images/3_overlay.png); }
+
+section.four .map { background-image: url(../images/clear1.png); }
+section.four .extra { background-image: url(../images/4_leftoverlay_final.png); }
+
+section.five .five_left { background-image: url(../images/5_leftdoor.jpg); }
+section.five .five_right { background-image: url(../images/5_rightdoor.jpg); }
+section.five .extras { background-image: url(../images/clear1.png); }
+section.five .extras_2 { background-image: url(../images/clear1.png); }
+
+section.six .extra_1 { background-image: url(../images/6_leftoverlay.png); }
+section.six .extra_2 { background-image: url(../images/6_rightoverlay.png); }
+
+@media screen and (max-width: 700px),
+only screen and (max-device-width: 480px) {
+	header .header_content { background-image: url(../images/mobile_header3.jpg); }
+}

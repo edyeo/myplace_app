@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @content.user_id %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @content.place_id %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= link_to image_tag @content.photo.url(:original)%>
+</p>
+
+<p>
+  <b>Story:</b>
+  <%= @content.story %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>
+
+
+http://localhost:3000/system/contents/photos/000/000/006/thumb/2012-06-14_14_55.jpeg?1344439917

@@ -1,23 +1,14 @@
 @import "bootstrap";
 
-/* mixins, variables, etc. */
-$grayMediumLight: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
-
-
-
 /* universal */
 html {
-  overflow-y : scroll;
+  overflow-y: scroll;
 }
 
 body {
   padding-top: 60px;
+  background-color: #000000;
+
 }
 
 section {
@@ -31,11 +22,12 @@ textarea {
 .center {
   text-align: center;
   h1 {
-  margin-bottom: 10px;
-  }  
+  	mergin-bottom: 10px;
+  }
 }
 
 /* typography */
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -53,13 +45,15 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: #999;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+/* header */
 
 #logo {
   float: left;
@@ -71,54 +65,55 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-  
-  &:hover{
-    color: #fff;
-    text-decoration: none;
-  } 
+  &:hover {
+  	color: #fff;
+  	text-decoration: none;
+  }
 }
 
 /* footer */
 
 footer {
-  margin-top: 130px;
+  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: $grayLight;
+  color: #999;
   a {
-    color: $gray ;
-    &:hover {
-      color: $grayDarker;
-    }
+  	color: #555;
+	&:hover {
+		color: #222;
+	}
   }
   small {
-    float: left;
-  }  
+  	float: left;
+  }
   ul {
-    float: right;
-    list-style: none;
-    li {
-    float: left;
-    margin-left: 10px;
-    }
+  	float: right;
+	list-style: none;
+	li {
+		float: left;
+		margin-left: 10px;
+	}
   }
 }
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
+/* miscellaneous */
 .debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-top: 45px;
+	@include box_sizing;
 }
 
 /* sidebar */
-
 aside {
   section {
-    margin-top: 10px;
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
     &:first-child {
@@ -142,31 +137,9 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
-
-.stats {
-  overflow: auto;
-  a {
-  	float: left;
-	padding: 0 10px;
-	border-left: 1px solid $grayLighter;
-	color: gray;
-	&:first-child {
-		padding-left: 0;
-		border: 0;
-	}
-	&:hover {
-		text-decoration: none;
-		color: $blue;
-	}
-  }
-  strong {
-    display: block;
-  }
-  }
 }
 
-/* forms */
-
+/* form */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -177,58 +150,61 @@ input, textarea, select, .uneditable-input {
 }
 
 #error_explanation {
-  color: #f00;
-  ul {
-    list-style: none;
-    margin: 0 0 18px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
-}
-
-/* users index */
-
-.users {
-	list-style: none;
-	margin: 0;
-	li {
-		overflow: auto;
-		padding: 10px 0;
-		boreder-top: 1px solid $grayLighter;
-		&:last-child {
-			border-bottom: 1px solid $grayLighter;
-		}
+	color: #f00;
+	ul {
+		list-style: none;
+		margin: 0 0 18px 0;
 	}
 }
 
-/* microposts */
+.field_with_errors {
+	@extend .control-group;
+	@extend .error;
+}
 
-.microposts {
-  list-style: none;
-  margin: 10px 0 0 0;
+/* users index */
+.users {
+	list-style: none;
+  	margin: 0;
+  	li {
+    	overflow: auto;
+    	padding: 10px 0;
+    	border-top: 1px solid $grayLighter;
+    	&:last-child {
+      		border-bottom: 1px solid $grayLighter;
+    	}
+  	}		
+}
 
-  li {
-    padding: 30px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-}
-.content {
-  display: block;
-}
-.timestamp {
-  color: $grayLight;
-}
-.gravatar {
+
+#container{width:860px; margin: 0 auto;  back-groundcolor: #000000; }
+.list_item {
+  width: 400px;
+  height: 00px;
+  margin: 0;
   float: left;
-  margin-right: 10px;
+
+  border:solid 1px #B4BBCD;
+  min-height:50px;
+  text-align:justify;
+  word-wrap:break-word; 
+  background-color: #0000;
+ 
 }
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
+
+
+#myModal { 
+	top: 35%;
+	width:83%; 
+	height: 80%; 
+	left:35%;
+
+	.modal-header {height:7.5%;}
+	.modal-body {
+		height:85%;
+		}
+	.modal-footer {height:7.5%;}
 }
+
+
 

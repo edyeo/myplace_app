@@ -1,0 +1,180 @@
+/* ------------------------------------------------------
+	Pics & Vids - PacSun - Golden State of Mind
+	
+	Last updated: 2012.04.23
+-------------------------------------------------------*/
+
+@import url("master.css");
+
+
+
+
+
+/* --- | Row | --- */
+
+.row {
+	clear: both;
+	position: relative;
+	margin-top: 17px;
+}
+	
+	.row h2 {
+		font-family: 'ProximaNovaSemibold';
+		font-size: 14px;
+		line-height: 1em;
+		text-transform: uppercase;
+		color: #767676;
+		position: absolute;
+		left: 148px;
+		padding-top: 6px;
+	}
+	
+	.row ul {
+		list-style: none;
+		margin: 0;
+		height: 135px;
+	}
+	
+	/* --- | Controls | --- */
+	
+	.row ul.controls {
+		position: relative;
+		width: 100%;
+		height: 29px;
+	}
+		
+		.row ul.controls li {
+			text-indent: -9999px;
+			position: absolute;
+			width: 98px;
+			height: 29px;
+		}
+			
+			.row ul.controls li a {
+				display: block;
+				height: 29px;
+				background: url(arrows.jpg) no-repeat;
+			}
+			
+			.row ul.controls li.left { left: 37px; }
+				.row ul.controls li.left a { background-position: 0 0; }
+					.row ul.controls li.left a:hover { background-position: 0 -29px; }
+		
+			.row ul.controls li.right { right: 38px; }
+				.row ul.controls li.right a { background-position: -98px 0; }
+					.row ul.controls li.right a:hover { background-position: -98px -29px; }
+					
+	
+	/* --- | Thumbnails | --- */
+	
+	.row ul.slider {
+		padding-left: 37px;
+	}
+		
+		.row ul.slider li {
+			float: left;
+			margin-right: 21px;
+		}
+			
+			.row ul.slider li.item {
+				position: relative;
+			}
+				
+				.row ul.slider li.item a {}
+					
+					.row ul.slider li.item a span.rollover {
+						font-family: 'ProximaNovaCondensedRegular';
+						font-size: 12px;
+						line-height: 1em;
+						text-indent: -9999px;
+						text-transform: uppercase;
+						color: #fff;
+						position: absolute;
+						left: 0;
+						top: 0;
+						display: block;
+						width: 182px;
+						height: 32px;
+						padding: 103px 9px 0 9px;
+					}
+					
+					.row ul.slider li.item.photo a span.rollover,
+					.row ul.slider li.item.instagram a span.rollover {
+						display: none;
+						background-repeat: no-repeat;
+						background-position: 50% 50%;
+					}
+
+						.row ul.slider li.item.photo a:hover span.rollover,
+						.row ul.slider li.item.instagram a:hover span.rollover { display: block; background-images: url(images_rollover.png); }
+					.row ul.slider li.item.video a span.rollover { background: url(video_rollover.png) no-repeat 0 -135px; }
+						.row ul.slider li.item.video a:hover span.rollover {
+							text-indent: 0;
+							background-position: 0 0;
+						}
+					.row ul.slider li.item.blog a span.rollover {}
+						.row ul.slider li.item.blog a:hover span.rollover {
+							text-indent: 0;
+							background: url(blog_rollover.png) no-repeat;
+						}
+					.row ul.slider li.item.photoset a span.rollover {}
+						.row ul.slider li.item.photoset a:hover span.rollover {
+							text-indent: 0;
+							background: url(photoset_rollover.png) no-repeat;
+						}
+					
+					.row ul.slider li.more {
+						text-indent: -9999px;
+						width: 200px;
+						height: 135px;
+					}
+						
+						.row ul.slider li.more a {
+							display: block;
+							height: 135px;
+							background: url(more.png) no-repeat;
+						}
+							
+							.row ul.slider li.more a:hover {
+								background-position: 0 -135px;
+							}
+							
+		/* --- | Twitter | --- */
+
+		.row ul.slider li.item.twitter {
+			font-size: 11px;
+			line-height: 14px;
+			color: #fff;
+			width: 154px;
+			height: 95px;
+			padding: 20px 23px;
+			background: #2c2c2c;
+		}
+
+			.row ul.slider li.item.twitter .timestamp {
+				font-size: 9px;
+				color: #B7B7B7;
+			}
+
+/* --- | Lectric | --- */
+
+.lectric-slider,.lectric-slider .items {
+	position: relative;
+}
+.lectric-slider .items {
+	left: 0;
+	width: 100000px;
+}
+.lectric-slider-touch {
+	-webkit-transform: translate3d(0, 0, 0);
+}
+.lectric-slider-touch .items {
+	-webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+	-webkit-font-smoothing: antialiased;
+}
+.lectric-slider-touch .item {
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+
+
