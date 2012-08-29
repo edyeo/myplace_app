@@ -1,0 +1,16 @@
+
+$('.modal-body').html("<%= escape_javascript(render :partial => "shared/flipboard_test") %>");
+
+var $container 	= $( '#flip' ),
+	$pages		= $container.children().hide();
+
+if (Modernizr.csstransforms3d && Modernizr.csstransitions) {
+	$container.flips();
+}else{
+	$pages.show();
+}
+
+
+
+
+

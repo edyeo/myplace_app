@@ -1,0 +1,35 @@
+<div class="row">
+	<h2>Most Recent</h2>
+	<ul class="controls">
+		<li class="left"><a href="#">Left</a></li>
+		<li class="right"><a href="#">Right</a></li>
+	</ul>
+
+	<% @most_recent_contents = Content.order('created_at desc').limit(10)%>
+
+	<ul class="slider">
+	<% @most_recent_contents.each do |mrcontent|%>
+		<li class="item blog">
+			<%= link_to image_tag(mrcontent.photo(:small),:height => '135', :width => '200'), 
+	    		{:controller => "contents", :action => "modal", :place_id => mrcontent.place_id},
+				:remote => true,
+	    		:data => {:toggle=>"modal", :target=>"#myModal"}, 
+				:class=>"hidden" %>
+		</li>	
+	<% end %>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

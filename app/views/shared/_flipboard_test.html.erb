@@ -1,0 +1,158 @@
+
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <title>Experimental Page Layout Inspired by Flipboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+    <meta name="description" content="Experimental Page Layout Inspired by Flipboard" />
+    <meta name="keywords" content="flip, pages, flipboard, layout, responsive, web, web design, grid, ipad, jquery, css3, 3d, perspective, transitions, transform" />
+    <meta name="author" content="" />
+
+    <link rel="shortcut icon" href="../favicon.ico"> 
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+
+	<script id="pageTmpl" type="text/x-jquery-tmpl">
+		<div class="${theClass}" style="${theStyle}">
+			<div class="front">
+				<div class="outer">
+					<div class="content" style="${theContentStyleFront}">
+						<div class="inner">{{html theContentFront}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="outer">
+					<div class="content" style="${theContentStyleBack}">
+						<div class="inner">{{html theContentBack}}</div>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</script>
+	<%= stylesheet_link_tag	  "/assets/jquery.tmpl.min.js"%>
+	<%= stylesheet_link_tag	  "/assets/core.string.js"%>
+	<%= stylesheet_link_tag	  "/assets/jquery.touchSwipe-1.2.5.js"%>
+	<%= stylesheet_link_tag	  "/assets/jquery.flips.js"%>
+</head>
+
+	<header class="main-title">
+		<h1> <strong> Place : <%= @place.place %></strong></h1>
+		<p>Swipe or drag to flip the pages, click to open items </p>
+	</header>
+	
+	<div id="flip" class="flip_test">
+
+		<div class="f-page f-cover">
+			<div class="cover-elements">
+				<div class="logo">
+		
+				<!-- image here -->
+				</div>
+				<h1>Introduction of place here </h1>
+				<div class="f-cover-story"><span>Cover Story</span> story here</div>
+			</div>
+			<div class="f-cover-flip">&lt; Flip</div>
+		</div>
+		
+		
+		<% article1 = {
+			1 => "box w-25 h-70",
+			2 => "box w-50 h-70 box-b-l box-b-r",
+			3 => "box w-25 h-70",
+			4 => "box w-50 h-30 box-b-r title-top",
+			5 => "box w-50 h-30 title-top"
+		}%>
+			
+		<% image1 = {
+			1 => "img-cont img-1",
+			2 => "img-cont img-2",
+			3 => "img-cont img-3"
+		}%>	
+		
+		<% article2 = {
+			1 => "box w-70 h-50 box-b-r title-top box-img-left",
+			2 => "box w-30 h-50",
+			3 => "box w-30 h-50 box-b-r title-top",
+			4 => "box w-70 h-50 title-top box-img-left"
+		}%>
+
+		<% image2 = {
+			1 => "img-cont img-4",
+			2 => "img-cont img-5",
+			4 => "img-cont img-6"
+		}%>		
+	
+		<% article3 = {
+			1 => "box w-30 h-60 box-b-r title-top",
+			2 => "box w-70 h-60 box-img-left title-top",
+			3 => "box w-40 h-40 box-img-left box-b-r title-top",
+			4 => "box w-30 h-40 box-b-r title-top",
+			5 => "box w-30 h-40 title-top"
+		}%>
+
+		<% image3 = {
+			2 => "img-cont img-7",
+			3 => "img-cont img-8"
+		}%>		
+		
+		<% fb_templ_set = {} %>	
+		<% fb_templ_set[1] = {'article' => article1, 'image' => image1} %>
+		<% fb_templ_set[2] = {'article' => article2, 'image' => image2} %>
+		<% fb_templ_set[3] = {'article' => article3, 'image' => image3} %>
+		<% templ_start_tag = true %>
+		<% templ_itr_cnt = 1 %>
+		<% templ = 1 %>
+		<% article_num = 1 %>
+		<% image_num = 1 %>
+		<% total_content_num = @contents.length %>
+		
+		
+		<% @contents.each do |content| %>
+			
+				<% if (templ_start_tag)  then %>
+					<div class="f-page">
+						<div class="f-title">
+							<h2> News from <%= @place.place %></h2>
+						</div>
+						<% templ_start_tag = false %>
+				<% end %>
+				
+				<%= content_tag :div, :class => fb_templ_set[templ]['article'][article_num] do %>
+					<% if (fb_templ_set[templ]['image'].has_key?(image_num)) %>
+						<%= image_tag(content.photo,:class => fb_templ_set[templ]['image'][image_num]) %>
+					<% end %>
+					<%= content_tag(:h3, @users.find(content.user_id).first.name) %>
+					<%= content_tag(:span, content.updated_at) %>
+					<%= content_tag(:p, content.story) %>
+				<% end %>
+					
+				<% if (templ_itr_cnt == fb_templ_set[templ]['article'].length ) then %>
+					</div>
+					<% templ_start_tag = true %>
+					<% templ_itr_cnt = 1 %>
+					<% templ = 1 %>
+					<% article_num = 1 %>
+					<% image_num = 1 %>
+					<% templ += 1 %>
+				<% end %>
+				
+				<% article_num += 1 %>
+				<% image_num += 1 %>
+				<% templ_itr_cnt += 1 %>
+				
+			<% end %>
+					
+		<div class="f-page f-cover-back">
+			<div id="codrops-ad-wrapper">
+			</div>
+		</div>
+	</div>
+
+
+
+			
+			
+
+							 
+	
+
