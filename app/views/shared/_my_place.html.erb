@@ -1,0 +1,9 @@
+
+
+<% @my_places_group_by_place_id.each do |my_place| %>
+
+    <% my_place_content = @my_places_contents.where(:place_id => my_place.place_id).order('created_at DESC').first %>
+	<%= link_to image_tag(my_place_content.photo(:small)), place_path(my_place.place_id) %><br>
+	<%= @places.find(my_place.place_id).first.place %><br>
+	<%= my_place_content.story %><br>
+<% end %>

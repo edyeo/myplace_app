@@ -14,7 +14,7 @@ class PlacesController < ApplicationController
   # GET /places/1.json
   def show
     @place = Place.find(params[:id])
-
+    @place_content = Content.where(:place_id => params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @place }

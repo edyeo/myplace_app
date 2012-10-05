@@ -10,6 +10,19 @@
   <%= @place.location %>
 </p>
 
+<p>
+  <%= link_to 'Leave A Message', new_content_path(:place_id => @place.id) %>
 
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+</p>
+<%= @place_content.each do |content| %>
+  <p>
+    <%= image_tag(content.photo) %>
+  </p>
+  <p>
+    <%= content.story %>	
+  </P>
+  <p>
+    <%= link_to 'Edit', edit_content_path(content.id) %> |
+    <%= link_to 'Delete', content_path(content.id), :confirm => 'Are you sure?', :method => 'delete' %>
+  </p>
+<% end %>

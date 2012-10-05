@@ -33,7 +33,11 @@ class ContentsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @content }
-   
+      format.js {
+        @place = Place.find(params[:place_id]);
+        @place_id = params[:place_id];
+        @place_name = @place.place
+      }
     end
   end
 
@@ -87,13 +91,14 @@ class ContentsController < ApplicationController
   end
 
   def modal
-
-  respond_to do |format|
-    format.js {
-      @users = User.all;
-      @place = Place.find(params[:place_id]);
-      @contents = @place.contents.limit(14);
-    }
+    respond_to do |format|
+      format.js {
+        @users = User.all;
+        @place = Place.find(params[:place_id]);
+        @place_id = params[:place_id];
+        @place_name = @place.place
+        @contents = @place.contents.limit(14);
+      }
     end
   end
 end

@@ -11,24 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class = "new_content_form">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :place_id, :value => params[:place_id] %>
+
+    <div class="field">
 	  <%= f.file_field :photo %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id, :value => current_user.id %>
-  </div>
-  <div class="field">
-    <%= f.label :place_id %><br />
-    <%= f.number_field :place_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :story %><br />
-    <%= f.text_area :story %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :story %><br />
+      <%= f.text_area :story %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
